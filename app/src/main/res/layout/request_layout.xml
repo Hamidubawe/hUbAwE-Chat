@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:id="@+id/requestImage"
+        android:src="@drawable/avatar"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/request_displayname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="loading.."
+        android:layout_toEndOf="@id/requestImage"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="25sp"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/request_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="loading..."
+        android:maxLines="1"
+        android:singleLine="true"
+        android:layout_below="@id/request_displayname"
+        android:layout_toEndOf="@id/requestImage"
+        android:layout_marginStart="10dp"
+        android:textSize="15sp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/request_status"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_toEndOf="@id/requestImage"
+        android:id="@+id/linearLayout"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ACCEPT"
+            android:textColor="#fff"
+            android:id="@+id/acceptBtn"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:background="#009966"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REJECT"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:id="@+id/rejectBtn"
+            android:textColor="#fff"
+            android:background="#CE0E15"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/requestConfirm"
+        android:text="request status"
+        android:singleLine="true"
+        android:layout_below="@id/request_status"
+        android:layout_toEndOf="@id/requestImage"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

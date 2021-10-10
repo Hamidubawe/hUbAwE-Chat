@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsersActivity"
+    android:orientation="vertical"
+    android:background="#EFEEEF">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/square_background"
+        android:hint="Search user eg... mighty Bawee"
+        android:layout_margin="10dp"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:id="@+id/searchEditText"
+        android:drawableEnd="@drawable/ic_search"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fkjsj"
+        android:layout_below="@id/searchEditText">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="People You May Know"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:id="@+id/peopleYouKnow"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/people"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/peopleYouKnow"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/usersRecycler"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/fkjsj"
+        android:layout_above="@id/adView"/>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

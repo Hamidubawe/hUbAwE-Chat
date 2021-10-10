@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="50dp"
+        android:id="@+id/albumart">
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="#DDDADA"
+            android:layout_centerVertical="true"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textColor="@color/colorAccent"
+        android:background="#DDDADA"
+        android:textStyle="bold"
+        android:layout_marginStart="5dp"
+        android:id="@+id/songArtist"
+        android:layout_marginEnd="70dp"
+        android:layout_toEndOf="@id/albumart"
+        android:layout_marginTop="5dp"/>
+
+
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:textColor="@color/colorAccent"
+        android:background="#DDDADA"
+        android:singleLine="true"
+        android:id="@+id/songTitle"
+        android:layout_below="@id/songArtist"
+        android:layout_toEndOf="@id/albumart"
+        android:layout_marginStart="5dp"
+        android:textSize="18sp"
+        android:layout_marginTop="10dp"/>
+
+</RelativeLayout>

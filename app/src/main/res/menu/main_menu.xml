@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/app_bar_search"
+        android:icon="@drawable/ic_search_black_24dp"
+        android:title="Search"
+        app:showAsAction="ifRoom"
+        android:visible="false"
+        app:actionViewClass="android.widget.SearchView" />
+
+    <item
+        android:id="@+id/findFriends"
+        android:title="Find Users"
+        android:icon="@drawable/ic_person_add"
+        app:showAsAction="ifRoom"/>
+
+
+
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_settings"
+        />
+
+    <item
+        android:id="@+id/log_out"
+        android:title="Log Out"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/exit"
+        android:title="Exit"
+        />
+
+
+
+</menu>

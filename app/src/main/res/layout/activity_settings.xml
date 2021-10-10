@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_toolbar"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:id="@+id/name"
+            android:layout_toEndOf="@id/picture"
+            android:layout_marginTop="8dp"
+            android:textColor="#fff"
+            android:singleLine="true"
+            android:layout_marginStart="7dp"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/avatar"
+                    android:layout_margin="15dp"
+                    android:id="@+id/settingsImage"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="UserName"
+                    android:layout_toEndOf="@id/settingsImage"
+                    android:textSize="27sp"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/usernameSettings"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bio"
+                    android:id="@+id/settingBio"
+                    android:layout_toEndOf="@id/settingsImage"
+                    android:layout_below="@id/usernameSettings"
+                    android:textSize="16sp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#121D1B"
+                    android:layout_below="@id/settingsImage"
+                    android:layout_marginTop="5dp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Log Out"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="#F44336"
+            android:padding="8dp"
+            android:textColor="#fff"
+            android:id="@+id/logOut"
+            android:layout_marginBottom="7dp"/>
+
+        <ListView
+            android:id="@+id/settingListView"
+            android:layout_width="match_parent"
+            android:layout_above="@id/logOut"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</LinearLayout>

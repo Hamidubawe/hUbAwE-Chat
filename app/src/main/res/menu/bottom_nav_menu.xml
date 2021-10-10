@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Chats"
+        android:id="@+id/chat"
+        android:icon="@drawable/ic_chat_icon"/>
+
+    <item
+        android:title="Friends"
+        android:id="@+id/friends"
+        android:icon="@drawable/ic_friends_icon"/>
+
+    <item
+        android:title=""
+        android:id="@+id/friendsfv"/>
+
+    <item
+        android:title="Requests"
+        android:id="@+id/request"
+        android:icon="@drawable/ic_person_add"/>
+
+    <item
+        android:title="My profile"
+        android:id="@+id/myProfile"
+        android:icon="@drawable/ic_person"/>
+
+</menu>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    tools:context="com.arewatechacademy.myapplication.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerLayout"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_toolbar"
+            app:menu="@menu/main_menu"
+            android:background="#F7F7F4">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:padding="10dp"
+                    android:src="@drawable/avatar"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/picture"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="0dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="name"
+                    android:id="@+id/name"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@id/picture"
+                    android:textColor="#555454"
+                    android:singleLine="true"
+                    android:layout_marginStart="5dp"
+                    android:textSize="17sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/verified"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="-7dp"
+                    android:layout_toEndOf="@id/name"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/verified"/>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#000"
+            android:layout_below="@id/main_toolbar"
+            android:visibility="gone"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame_layout"
+            android:layout_above="@id/coordinator"
+            android:layout_below="@id/main_toolbar"
+            android:background="@android:color/white"/>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            ads:adSize="SMART_BANNER"
+            android:layout_above="@id/coordinator"
+            ads:adUnitId="@string/banner_ad_unit_id"
+            android:visibility="gone">
+        </com.google.android.gms.ads.AdView>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/coordinator">
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/appBar"
+                android:layout_gravity="bottom"
+                app:fabCradleMargin="20dp"
+                android:gravity="center_horizontal"
+                app:fabCradleRoundedCornerRadius="10dp">
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/bottomNavigation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="0dp"
+                    app:itemHorizontalTranslationEnabled="true"
+                    app:labelVisibilityMode="labeled"
+                    android:layout_alignParentBottom="true"
+                    app:menu="@menu/bottom_nav_menu" />
+
+
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_home"
+                app:layout_anchor="@id/appBar"
+                android:id="@+id/postBtn"
+                app:layout_anchorGravity="center_horizontal"
+                android:background="@color/colorPrimary" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:id="@+id/noInternetTv"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="No Internet Connection"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/gnt_black"
+            android:id="@+id/nt"
+            />
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_wifi_off"
+            android:layout_below="@id/nt"
+            android:id="@+id/noWifi"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Refresh"
+            android:layout_below="@+id/noWifi"
+            android:layout_marginTop="25dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/gnt_white"
+            android:id="@+id/refreshBtn"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

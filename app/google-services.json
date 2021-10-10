@@ -1,0 +1,122 @@
+{
+  "project_info": {
+    "project_number": "1042719753577",
+    "firebase_url": "https://meetchat-2260a.firebaseio.com",
+    "project_id": "meetchat-2260a",
+    "storage_bucket": "meetchat-2260a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042719753577:android:eef1046d198902f90ba9f8",
+        "android_client_info": {
+          "package_name": "com.arewatechacademy.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042719753577-l2ih9as76klejphk32dblgd795k53hm5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arewatechacademy.myapplication",
+            "certificate_hash": "642edcdb8567f9214412a180a82a08ff31e1e9ec"
+          }
+        },
+        {
+          "client_id": "1042719753577-huk188jgui83s74d6om32uhskupp7v5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfRGDnMVqM4x2-NfRkfR0bnB7Jwvl_gzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042719753577-huk188jgui83s74d6om32uhskupp7v5e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042719753577:android:1609f70509ffd0210ba9f8",
+        "android_client_info": {
+          "package_name": "com.google.hubawe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042719753577-v2e9jn8hjb8emjnvkjo0lf8j47ilos7r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.hubawe",
+            "certificate_hash": "642edcdb8567f9214412a180a82a08ff31e1e9ec"
+          }
+        },
+        {
+          "client_id": "1042719753577-huk188jgui83s74d6om32uhskupp7v5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfRGDnMVqM4x2-NfRkfR0bnB7Jwvl_gzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042719753577-huk188jgui83s74d6om32uhskupp7v5e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042719753577:android:c176d6d627cb6c1e0ba9f8",
+        "android_client_info": {
+          "package_name": "com.google.meetchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042719753577-di2777i5nj4a5gib4pqgdthroib79mam.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.meetchat",
+            "certificate_hash": "642edcdb8567f9214412a180a82a08ff31e1e9ec"
+          }
+        },
+        {
+          "client_id": "1042719753577-huk188jgui83s74d6om32uhskupp7v5e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfRGDnMVqM4x2-NfRkfR0bnB7Jwvl_gzQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1042719753577-huk188jgui83s74d6om32uhskupp7v5e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

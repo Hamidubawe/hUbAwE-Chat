@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeRefresh"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Fragments.PostFragment"
+    android:layout_margin="8dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editextstyle"
+            android:hint="What's going on???"
+            android:drawableEnd="@drawable/ic_camera_icon"
+            android:padding="8dp"
+            android:gravity="center_horizontal"
+            android:id="@+id/newPostEtx"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="No Posts"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:id="@+id/noPost"
+            android:visibility="gone"/>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/shimmer_layout"
+            android:layout_marginTop="8dp"
+            app:shimmer_duration="1200"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    layout="@layout/post_shimmer"/>
+
+                <include
+                    layout="@layout/post_shimmer"/>
+
+                <include
+                    layout="@layout/post_shimmer"/>
+
+                <include
+                    layout="@layout/post_shimmer"/>
+
+                <include
+                    layout="@layout/post_shimmer"/>
+
+                <include
+                    layout="@layout/post_shimmer"/>
+
+                <include
+                    layout="@layout/post_shimmer"/>
+
+
+            </LinearLayout>
+
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/postRecycler"
+            android:layout_marginTop="8dp"
+            tools:listitem="@layout/post_layout"
+            android:visibility="gone"/>
+
+
+    </LinearLayout>
+
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

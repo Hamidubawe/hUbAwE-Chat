@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPostActivity"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:background="#EEEEEE">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_arrow_back"
+                android:id="@+id/back"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Create a new post"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="7dp"
+                android:layout_toEndOf="@id/back"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/chosePhoto"
+                android:src="@drawable/ic_add_a_photo"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="7dp"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:hint="Say something..."
+        android:background="@drawable/square_background"
+        android:padding="8dp"
+        android:text=""
+        android:id="@+id/newPostEtx"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:visibility="invisible"
+        android:maxHeight="300dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/postImage"
+        android:src="@drawable/avatar"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Post"
+        android:id="@+id/publishBtn"/>
+
+</LinearLayout>
